@@ -1,0 +1,123 @@
+This file is from:
+
+    http://hgdownload.cse.ucsc.edu/goldenPath/hg18/multiz44way/README.txt
+
+This directory contains compressed multiple alignments of the 
+following assemblies to the human genome (hg18, Mar. 2006):
+
+    _ Human           Homo sapiens                   Mar. 2006   hg18
+    _ Chimp           Pan troglodytes                Mar. 2006   panTro2
+    _ Gorilla         Gorilla gorilla gorilla        Oct. 2008   gorGor1
+    _ Orangutan       Pongo pygmaeus abelii          July 2007   ponAbe2
+    _ Rhesus          Macaca mulatta                 Jan. 2006   rheMac2
+    _ Marmoset        Callithrix jacchus             June 2007   calJac1
+    _ Tarsier         Tarsius syrichta               Aug. 2008   tarSyr1
+    _ Mouse lemur     Microcebus murinus             Jun. 2003   micMur1
+    _ Bushbaby        Otolemur garnettii             Dec. 2006   otoGar1
+    _ TreeShrew       Tupaia belangeri               Dec. 2006   tupBel1
+    _ Mouse           Mus musculus                   July 2007   mm9
+    _ Rat             Rattus norvegicus              Nov. 2004   rn4
+    _ Kangaroo rat    Dipodomys ordii                July 2008   dipOrd1
+    _ Guinea Pig      Cavia porcellus                Feb. 2008   cavPor3
+    _ Squirrel        Spermophilus tridecemlineatus  Feb. 2008   speTri1
+    _ Rabbit          Oryctolagus cuniculus          May  2005   oryCun1
+    _ Pika            Ochotona princeps              July 2008   ochPri2
+    _ Alpaca          Vicugna pacos                  July 2008   vicPac1
+    _ Dolphin         Tursiops truncatus             Feb. 2008   turTru1
+    _ Cow             Bos taurus                     Oct. 2007   bosTau4
+    _ Horse           Equus caballus                 Sep. 2007   equCab2
+    _ Cat             Felis catus                    Mar. 2006   felCat3
+    _ Dog             Canis lupus familiaris         May  2005   canFam2
+    _ Microbat        Myotis lucifugus               Mar. 2006   myoLuc1
+    _ Megabat         Pteropus vampyrus              July 2008   pteVam1
+    _ Hedgehog        Erinaceus europaeus            June 2006   eriEur1
+    _ Shrew           Sorex araneus                  June 2006   sorAra1
+    _ Elephant        Loxodonta africana             July 2008   loxAfr2
+    _ Rock hyrax      Procavia capensis              July 2008   proCap1
+    _ Tenrec          Echinops telfairi              July 2005   echTel1
+    _ Armadillo       Dasypus novemcinctus           July 2008   dasNov2
+    _ Sloth           Choloepus hoffmanni            July 2008   choHof1
+    _ Opossum         Monodelphis domestica          Jan. 2006   monDom4
+    _ Platypus        Ornithorhynchus anatinus       Mar. 2007   ornAna1
+    _ Chicken         Gallus gallus                  May  2006   galGal3
+    _ Zebra finch     Taeniopygia guttata            July 2008   taeGut1
+    _ Lizard          Anolis carolinensis            Feb. 2007   anoCar1
+    _ X. tropicalis   Xenopus tropicalis             Aug. 2005   xenTro2
+    _ Tetraodon       Tetraodon nigroviridis         Feb. 2004   tetNig1
+    _ Fugu            Takifugu rubripes              Oct. 2004   fr2
+    _ Stickleback     Gasterosteus aculeatus         Feb. 2006   gasAcu1
+    _ Medaka          Oryzias latipes                Oct. 2005   oryLat2
+    _ Zebrafish       Danio rerio                    July 2007   danRer5
+    _ Lamprey         Petromyzon marinus             Mar. 2007   petMar1
+
+
+These alignments were prepared using the methods described in the
+track description file:
+http://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg18&g=cons44way
+based on the phylogenetic tree: 44way.nh.
+
+Files in this directory:
+    - 44way.nh - phylogenetic tree for the phastCons and phyloP calculations
+    - commonNames.nh - same as 44way.nh with the UCSC database name
+	replace by the common name for the species
+
+The "alignments" directory contains compressed FASTA alignments
+for the CDS regions of the human genome (hg18, Mar. 2006) aligned to the 
+assemblies.
+
+The maf/chr*.maf.gz files each contain all the alignments to that 
+particular human chromosome, with additional annotations to
+indicate gap context, genomic breaks, and quality scores for the
+sequence in the underlying genome assemblies.
+
+The maf/upstream*.maf.gz files contain alignments in regions upstream of
+annotated transcription starts for RefSeq genes with annotated 5' UTRs.
+These files differ from the standard MAF format: they display
+alignments that extend from start to end of the upstream region in 
+human, whether or not alignments actually exist. In situations where no  
+alignments exist or the alignments of one or more species are missing, 
+dot (".") is used as a placeholder. Multiple regions of an assembly's
+sequence may align to a single region in human; therefore, only the 
+species name is displayed in the alignment data and no position information 
+is recorded. The alignment score is always zero in these files. These files
+are updated weekly.
+
+The SiepelLabCorrectedMafs directory contains a masked set of
+32-way alignments.  Based on the 44-way, 2x MAFs, and the quality scores, 
+the 32 species were extracted.
+
+For a description of multiple alignment format (MAF), see
+http://genome.ucsc.edu/goldenPath/help/maf.html
+
+PhastCons conservation scores for these alignments are available at:
+http://hgdownload.cse.ucsc.edu/goldenPath/hg18/phastCons44way
+
+PhyloP conservation scores for these alignments are available at:
+http://hgdownload.cse.ucsc.edu/goldenPath/hg18/phyloP44way
+
+---------------------------------------------------------------
+To download a large file or multiple files from this directory, we recommend 
+that you use rsync or ftp rather than downloading the files via our website.
+There is approximately 35 Gb of compressed data in this directory.
+
+Via rsync:
+rsync -avz --progress \
+	rsync://hgdownload.cse.ucsc.edu/goldenPath/hg18/multiz44way/ ./
+
+Via FTP:
+    ftp hgdownload.cse.ucsc.edu 
+    user name: anonymous
+    password: <your email address>
+    go to the directory goldenPath/hg18/multiz44way
+
+To download multiple files from the UNIX command line, use the "mget" command. 
+    mget <filename1> <filename2> ...
+    - or -
+    mget -a (to download all the files in the directory) 
+Use the "prompt" command to toggle the interactive mode if you do not want 
+to be prompted for each file that you download.
+
+---------------------------------------------------------------
+All the files in this directory are freely usable for any 
+purpose. For data use restrictions regarding the individual 
+genome assemblies, see http://genome.ucsc.edu/goldenPath/credits.html.
